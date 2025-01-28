@@ -1,13 +1,14 @@
 require('dotenv').config();
 const express = require('express');
 const app = express();
+var morgan = require('morgan')
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const productRoutes = require('./routes/productRoutes');
 const categoryRoutes = require('./routes/categoryRoutes');
 
 app.use(bodyParser.json());
-
+app.use(morgan('tiny'))
 
 
 
