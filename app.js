@@ -8,6 +8,7 @@ const mongoose = require('mongoose');
 const productRoutes = require('./routes/productRoutes');
 const categoryRoutes = require('./routes/categoryRoutes');
 const userRoutes = require('./routes/userRoutes');
+const orderRoutes = require('./routes/orderRoutes');
 
 const errorHandler = require('./helpers/errorHandler');
 const authMiddleware = require('./helpers/authMiddleware'); // Updated middleware
@@ -21,6 +22,7 @@ app.use(authMiddleware);
 app.use('/api/v1/products', productRoutes);
 app.use('/api/v1/categories', categoryRoutes);
 app.use('/api/v1/users', userRoutes);
+app.use('/api/v1/orders', orderRoutes);
 
 app.get('/', (req, res) => {
   res.status(200).send('Welcome to first project!');
