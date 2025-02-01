@@ -125,7 +125,6 @@ exports.getUserCount = async (req, res) => {
 
 
 
-// Other imports and functions
 
 exports.deleteUserById = async (req, res) => {
   try {
